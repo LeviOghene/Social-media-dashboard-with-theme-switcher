@@ -1,0 +1,316 @@
+:root{
+--Lime-Green: hsl(163, 72%, 41%);
+--Bright-Red: hsl(356, 69%, 56%);
+--Facebook: hsl(208, 92%, 53%);
+--Twitter: hsl(203, 89%, 53%);
+--YouTube: hsl(348, 97%, 39%);
+--Toggle: hsl(230, 22%, 74%);
+
+/* Dark Theme */
+
+--Very-Dark-Blue /*(BG)*/: hsl(230, 17%, 14%);
+--Very-Dark-Blue /*(Top BG Pattern)*/: hsl(232, 19%, 15%);
+--Dark-Desaturated-Blue /*(Card BG)*/: hsl(228, 28%, 20%);
+--Desaturated-Blue /*(Text)*/: hsl(228, 34%, 66%);
+--White /*(Text)*/: hsl(0, 0%, 100%);
+
+/* Light Theme*/
+
+--Very-Pale-Blue /*(Top BG Pattern)*/: hsl(225, 100%, 98%);
+--Light-Grayish-Blue /*(Card BG)*/: hsl(227, 47%, 96%);
+--Dark-Grayish-Blue /*(Text)*/: hsl(228, 12%, 44%);
+--Very-Dark-Blue /*(Text)*/: hsl(230, 17%, 14%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    color: var(--Dark-Grayish-Blue);
+    padding: 30px 25px 90px 25px ;
+    background-color: var(--Very-Pale-Blue);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.dashboard article{
+   border-bottom: 1px solid var(--Dark-Grayish-Blue);
+   padding-bottom: 20px;
+   margin-bottom: 20px;
+   line-height: 1.7rem;
+}
+
+.dashboard h2{
+    color: var(--Very-Dark-Blue);
+    font-size: 23px;
+}
+
+.dashboard p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.toggle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggle .btn-toggle{
+    border: none;
+    width: 50px;
+    background-color: var(--Toggle);
+    border-radius: 25px;
+    padding: 2px 2px 2px 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.toggle .btn-dark{
+    border: none;
+    width: 50px;
+    background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    border-radius: 25px;
+    padding: 2px 2px 2px 0;
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+
+.toggle .btn-toggle .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--White);
+}
+
+.toggle .btn-dark .dark-circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--Very-Dark-Blue);
+}
+
+.container{
+    color: var(--Dark-Grayish-Blue);
+    position: relative;
+    top: -45px;
+}
+
+.container .followers{
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+
+.container .followers .follower-card{
+    background-color: var(--Light-Grayish-Blue);
+    text-align: center;
+    padding: 25px 0;
+    width: 280px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.container .followers #facebook{
+    border-top: 3px solid var(--Facebook);
+}
+
+.container .followers #twitter{
+    border-top: 3px solid var(--Twitter);
+}
+
+.container .followers #instagram{
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1;
+
+}
+
+.container .followers #youtube{
+    border-top: 3px solid var(--YouTube);
+}
+
+.container .followers .follower-card .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.container .followers .follower-card .user p{
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.container .followers .follower-card article{
+    margin-bottom: 25px;
+}
+
+.container .followers .follower-card article h1{
+    color: var(--Very-Dark-Blue);
+    font-size: 50px;
+}
+
+
+.container .followers .follower-card article p{
+    text-transform: uppercase;
+}
+
+.container .followers .follower-card .new{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--Lime-Green);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.overview h2{
+    margin-left: 20px;
+    margin-bottom: 30px;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.overview-cards{
+    display: grid;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.overview-card{
+    background-color: var(--Light-Grayish-Blue);
+    width: 280px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.overview-card .views{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overview-card .views p{
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.overview-card .no{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overview-card .no .percent{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.overview-card .no .percent p{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.overview-card .no .percent .increase{
+    color: var(--Lime-Green);
+}
+
+.overview-card .no .percent .reduce{
+    color: var(--Bright-Red);
+}
+
+@media(min-width:900px){
+    .dashboard{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 135px 150px 135px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .dashboard article{
+        border-bottom: none;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .dashboard h2{
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+
+    .toggle{
+        gap: 10px;
+        align-items: center;
+    }
+
+    .toggle .btn-toggle:hover{
+        cursor: pointer;
+    }
+
+    .toggle .btn-dark:hover{
+        cursor: pointer;
+    }
+
+    .container{
+        top: -100px;
+    }
+
+    .container .followers{
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        padding: 0 120px;
+    }
+
+    .container .followers .follower-card{
+        width: 250px;
+    }
+
+    .container .followers .follower-card:hover{
+        background-color: hsl(226, 48%, 89%);
+        cursor: pointer;
+    }
+
+    .overview{
+        position: relative;
+        top: -55px;
+    }
+
+    .overview h2{
+        margin-left: 120px;
+    }
+
+    .overview-cards{
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 120px;
+        gap: 30px;
+    }
+
+    .overview-card{
+        width: 250px;
+    }
+
+    .overview-card:hover{
+        cursor: pointer;
+        background-color: hsl(226, 48%, 89%);
+    }
+}
